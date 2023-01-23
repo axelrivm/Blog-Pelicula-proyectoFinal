@@ -1,0 +1,28 @@
+{% extends "main/padre.html" %}
+
+{% load static %}
+
+{% block titulo%}
+
+<span class="subheading">Aca Ingresas</span>
+
+{% endblock %}
+
+<h3>{{ mensaje }}</h3>
+
+{% block funcion %}
+
+<form action = "{% url 'login' %}" method="POST">{% csrf_token %}
+
+    <table>
+
+        {{ form.as_table }}
+
+    </table>
+
+    <input type = 'submit' value = 'Ingresar'> </input>
+
+
+</form>
+
+{% endblock %}

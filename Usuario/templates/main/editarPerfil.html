@@ -1,0 +1,36 @@
+{% extends "main/padre.html" %}
+
+{% load static %}
+
+{% block titulo%}
+
+<span class="subheading">Editando usuario: {{ nombreusuario }}</span>
+
+{% endblock %}
+
+<h3>{{ mensaje }}</h3>
+
+{% block funcion %}
+
+<<<<<<< HEAD
+<form action = "{% url 'editarPerfil' %}" method="POST" enctype="multipart/form-data">{% csrf_token %}
+=======
+<form action = "{% url 'editarPerfil' %}" method="POST">{% csrf_token %}
+>>>>>>> 8278c2b0ebc7ec4f09613d7e7cad083a6bcf4a9f
+
+    <table>
+
+        {{ form.as_table }}
+<<<<<<< HEAD
+        {{ iForm.as_table}}
+=======
+>>>>>>> 8278c2b0ebc7ec4f09613d7e7cad083a6bcf4a9f
+
+    </table>
+
+    <input type = 'submit' value = 'Modificar usuario'> </input>
+
+
+</form>
+
+{% endblock %}

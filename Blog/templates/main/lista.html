@@ -1,0 +1,45 @@
+{% extends "main/padre.html" %}
+
+{% load static %}
+
+{% block titulo%}
+
+    <span class="subheading">Aca listo las pelis</span>
+
+{% endblock %}
+
+
+{% block funcion %}
+    {% if user.is_authenticated %}
+        <div class="container">
+            <div class="d-flex justify-content-center">
+                <form action = "{% url 'crearPeli' %}" method="GET">
+                    <div><input type="submit" name="crearPeli" value="Crear pelicula"></div>
+                </form>    
+            </div>   
+        </div>
+    {% endif %}
+{% endblock %}
+
+
+{% block funcion2 %}
+    <div class="container">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            {% for peli in peliculas %}
+                <div class="col-4">
+                    <img src="{{ peli.imagen.url }}" width=80 >
+                    <h4>{{peli.nombre}} </h4>
+                    <h3>{{peli.sinopsis}}</h3>
+                    <h3>{{peli.año}}</h3>
+                    {% if user.is_authenticated %}
+                    <a class="btn btn-danger" href="{% url 'modificarPeli' peli.id %}">Modificar</a>
+                    <a class="btn btn-danger" href="{% url 'eliminarPeli' peli.id %}">Eliminar</a>
+                    {% endif%}
+                    <a class="btn btn-success"  href="{% url 'verPeliDetalle' peli.id %}">Ver mas</a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
+

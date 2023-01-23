@@ -1,0 +1,37 @@
+{% extends "main/padre.html" %}
+
+
+{% load static %}
+
+{% block titulo%}
+
+<span class="subheading">Aca veo la peli</span>
+
+{% endblock %}
+
+{% block funcion2 %}
+
+{% for peli in peliculas %}
+
+    <div class="d-flex justify-content-center">
+        <div class="row">
+            {% for peli in peliculas %}
+            <form action = "" method="POST" enctype="multipart/form-data">{% csrf_token %}
+                <div class="col-4">
+                    <img src="{{peli.imagen.url}}" width=250 >
+                    <h4>Nombre: {{peli.nombre}} </h4>
+                    <h3>Sinopsis: {{peli.sinopsis}}</h3>
+                    <h3>Año de creacion: {{peli.año}}</h3>
+                    {% if user.is_authenticated %}
+                    <a class="btn btn-danger" href="{% url 'modificarPeli' peli.id %}">Modificar</a>
+                    <a class="btn btn-danger" href="{% url 'eliminarPeli' peli.id %}">Eliminar</a>
+                    {% endif %}
+                </div>
+            </form>               
+            {% endfor %}
+        </div>
+    </div>
+
+{% endfor %}
+
+{% endblock %}
