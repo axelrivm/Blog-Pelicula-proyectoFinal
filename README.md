@@ -1,4 +1,4 @@
-# Proyecto final - Axel Rivera
+# Proyecto final - Axel Rivera: Blog de peliculas
 
 ## Descargar:
     Desde una consola o el bash de git usar el siguiente comando
