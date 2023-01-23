@@ -6,15 +6,13 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 def inicio(request):
-<<<<<<< HEAD
     if request.method == "POST":
         return redirect('inicio')
     else:
         peliculas = Pelicula.objects.all()
         return render (request, 'main/inicio.html', {"peliculas": peliculas})
-=======
     return render (request, 'main/inicio.html')
->>>>>>> 8278c2b0ebc7ec4f09613d7e7cad083a6bcf4a9f
+
 
 @login_required
 def crearPeli(request):

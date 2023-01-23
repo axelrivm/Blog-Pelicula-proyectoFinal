@@ -24,9 +24,5 @@ urlpatterns = [
     path('Blog/', include('Blog.urls')),   
     path('Usuario/', include('Usuario.urls')),
     path('', views.inicio),
-<<<<<<< HEAD
     path('chat/', include('chat.urls')),
-=======
->>>>>>> 8278c2b0ebc7ec4f09613d7e7cad083a6bcf4a9f
-
 ] + static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)

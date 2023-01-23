@@ -39,11 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'Usuario',
     'Blog',
-<<<<<<< HEAD
     'chat.apps.ChatConfig', 
-    'channels',
-=======
->>>>>>> 8278c2b0ebc7ec4f09613d7e7cad083a6bcf4a9f
+    'channels', 
 ]
 
 MIDDLEWARE = [
@@ -75,11 +72,10 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'proyecto.wsgi.application'
-<<<<<<< HEAD
+
 ASGI_APPLICATION = 'proyecto.routing.application'
 
-=======
->>>>>>> 8278c2b0ebc7ec4f09613d7e7cad083a6bcf4a9f
+
 
 
 # Database
@@ -127,12 +123,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-<<<<<<< HEAD
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-=======
- 
->>>>>>> 8278c2b0ebc7ec4f09613d7e7cad083a6bcf4a9f
+
 STATIC_URL = 'static/'
 
 STATICFILES_URL = [
@@ -151,7 +145,7 @@ LOGOUT_REDIRECT_URL = '/Blog/'
 LOGIN_REDIRECT_URL = '/templates/login/'
 
 MEDIA_URL = "/media/"
-<<<<<<< HEAD
+
 MEDIA_ROOT = BASE_DIR / "media"
 
 CHANNEL_LAYERS = {
@@ -162,6 +156,6 @@ CHANNEL_LAYERS = {
         },
     },
 }
-=======
+
 MEDIA_ROOT = BASE_DIR / "media"
->>>>>>> 8278c2b0ebc7ec4f09613d7e7cad083a6bcf4a9f
+

@@ -33,13 +33,8 @@
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="{% url 'about' %}">Acerca de mi</a></li>
                         {% if user.is_authenticated %}
                         <li class="nav-item"><a class="btn btn-success">Hola {{ user.username }}</a></li>
-<<<<<<< HEAD
                         <li class="nav-item"><a class="btn btn-success" href="{% url 'editarPerfil' %}">Editar {{ user.username }}</a></li>
                         <li class="nav-item"><a class="btn btn-danger" href="{% url 'logout' %}">Logout</a></li>
-                        
-=======
-                        <li class="nav-item"><a class="btn btn-danger" href="{% url 'logout' %}">Logout</a></li>
->>>>>>> 8278c2b0ebc7ec4f09613d7e7cad083a6bcf4a9f
                         {% else %}
                         <li class="nav-item"><a class="btn btn-secondary" href="{% url 'register' %}">Registro</a></li>
                         <li class="nav-item"><a class="btn btn-primary" href="{% url 'login' %}">Login</a></li>
@@ -49,11 +44,7 @@
             </div>
         </nav>
         <!-- Page Header-->
-<<<<<<< HEAD
         <header class="masthead" style="background-image: url('{% static '/assets/img/fondo2.jpg' %}')">
-=======
-        <header class="masthead" style="background-image: url('{% static '/assets/img/home-bg.jpg' %}')">
->>>>>>> 8278c2b0ebc7ec4f09613d7e7cad083a6bcf4a9f
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
@@ -73,7 +64,6 @@
         </header>
         <!-- Main Content-->
         <div class="container px-4 px-lg-5">
-<<<<<<< HEAD
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <!-- Post preview-->
@@ -86,72 +76,9 @@
                         <p class="post-meta">
                             Posted by
                             <a href="{% url 'about' %}">Axel Rivera</a>
-=======
-            <h1>{{ mensaje }}</h1>
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7">
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="post.html">
-                            <h2 class="post-title">Peli #1</h2>
-                            <h3 class="post-subtitle">INFORMACION PELI</h3>
-                        </a>
-                        <p class="post-meta">
-                            Posted by
-                            <a href="#!">Start Bootstrap</a>
-                            on September 24, 2022
                         </p>
                     </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="post.html"><h2 class="post-title">I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.</h2></a>
-                        <p class="post-meta">
-                            Posted by
-                            <a href="#!">Start Bootstrap</a>
-                            on September 18, 2022
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="post.html">
-                            <h2 class="post-title">Peli #2</h2>
-                            <h3 class="post-subtitle">INFORMACION PELI 2</h3>
-                        </a>
-                        <p class="post-meta">
-                            Posted by
-                            <a href="#!">Start Bootstrap</a>
->>>>>>> 8278c2b0ebc7ec4f09613d7e7cad083a6bcf4a9f
-                            on August 24, 2022
-                        </p>
-                    </div>
-                    <!-- Divider-->
-<<<<<<< HEAD
-                    
                     {% endfor %}
-                    <!-- Divider-->
-=======
-                    <hr class="my-4" />
-                    <!-- Post preview-->
-                    <div class="post-preview">
-                        <a href="post.html">
-                            <h2 class="post-title">Peli #3</h2>
-                            <h3 class="post-subtitle">Peli 3</h3>
-                        </a>
-                        <p class="post-meta">
-                            Posted by
-                            <a href="#!">Start Bootstrap</a>
-                            on July 8, 2022
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    <!-- Pager-->
-                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
->>>>>>> 8278c2b0ebc7ec4f09613d7e7cad083a6bcf4a9f
                 </div>
             </div>
         </div>
@@ -163,34 +90,15 @@
                     <div class="col-md-10 col-lg-8 col-xl-7">
                         <ul class="list-inline text-center">
                             <li class="list-inline-item">
-<<<<<<< HEAD
                                 <a href="https://www.coderhouse.com/">
                                     <span class="fa-stack fa-lg">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-blogger fa-stack-1x fa-inverse"></i>
-=======
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
->>>>>>> 8278c2b0ebc7ec4f09613d7e7cad083a6bcf4a9f
                                     </span>
                                 </a>
                             </li>
                             <li class="list-inline-item">
-<<<<<<< HEAD
                                 <a href="https://github.com/axelrivm/Blog-Pelicula-proyectoFinal-.git">
-=======
-                                <a href="#!">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fas fa-circle fa-stack-2x"></i>
-                                        <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            </li>
-                            <li class="list-inline-item">
-                                <a href="#!">
->>>>>>> 8278c2b0ebc7ec4f09613d7e7cad083a6bcf4a9f
                                     <span class="fa-stack fa-lg">
                                         <i class="fas fa-circle fa-stack-2x"></i>
                                         <i class="fab fa-github fa-stack-1x fa-inverse"></i>
