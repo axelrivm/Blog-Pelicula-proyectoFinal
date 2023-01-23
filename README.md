@@ -12,3 +12,10 @@
 
 ## Video mostrando el proyecto:
 *Finalizado para el 23/01*
+
+
+##AVISO 
+Al momento al proyecto le falta:
+- El uso de CHAT (en mi caso se quizo utilizar CHANNELS y REDIS pero tengo problema con REDIS al querer levantarlo dentro del entorno virtual. 
+- Falta que en el alta del usuario y modificacion, se pueda agregar/modificar imagen.
+- Redireccionamiento a 404 not found al buscar una pelicula no creada o ingreso a paginas erroneas.
