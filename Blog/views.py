@@ -11,7 +11,7 @@ def inicio(request):
     else:
         peliculas = Pelicula.objects.all()
         return render (request, 'main/inicio.html', {"peliculas": peliculas})
-    return render (request, 'main/inicio.html')
+    
 
 
 @login_required
