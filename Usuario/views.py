@@ -10,7 +10,6 @@ from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
-from .forms import *
 
 # Create your views here.
 
@@ -25,7 +24,7 @@ def ingreso(request):
             usuario= authenticate(username=name, password=password)
             if usuario is not None:
                 login(request, usuario)
-                return redirect('inicio')
+                return render(request, "main/inicio.html", {"mensaje":f"Usuario {usuario} ingresado correctamente"})
             else:
                 return render(request, "main/login.html", {"form": form, "mensaje": "Error al ingresar el usuario"})
         else:
@@ -40,7 +39,7 @@ def register(request):
         if form.is_valid():
             username= form.cleaned_data
             form.save()
-            return redirect('inicio')
+            return render(request, "main/inicio.html", {"mensaje":f"Usuario {username} creado correctamente"})
         else:
             return render(request, "main/register.html", {"form": form, "mensaje": "Error al crear el usuario"})
         
@@ -51,6 +50,7 @@ def register(request):
 @login_required
 def editarPerfil(request):
     usuario=request.user
+    
     if request.method=="POST":
         form= editarUsuario(request.POST)
         if form.is_valid():
@@ -61,7 +61,7 @@ def editarPerfil(request):
             usuario.first_name = info["first_name"]
             usuario.last_name = info["last_name"]
             usuario.save()
-            return redirect('inicio')
+            return render(request, "main/inicio.html", {"mensaje":f"Usuario {usuario} modificado correctamente"})
         else:
             return render(request, "main/editarPerfil.html", {"form": form, "nombreusuario":usuario.username})
     else:

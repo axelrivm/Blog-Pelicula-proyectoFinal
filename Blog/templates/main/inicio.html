@@ -35,6 +35,7 @@
                         <li class="nav-item"><a class="btn btn-success">Hola {{ user.username }}</a></li>
                         <li class="nav-item"><a class="btn btn-success" href="{% url 'editarPerfil' %}">Editar {{ user.username }}</a></li>
                         <li class="nav-item"><a class="btn btn-danger" href="{% url 'logout' %}">Logout</a></li>
+                        
                         {% else %}
                         <li class="nav-item"><a class="btn btn-secondary" href="{% url 'register' %}">Registro</a></li>
                         <li class="nav-item"><a class="btn btn-primary" href="{% url 'login' %}">Login</a></li>
@@ -76,9 +77,13 @@
                         <p class="post-meta">
                             Posted by
                             <a href="{% url 'about' %}">Axel Rivera</a>
+                            on August 24, 2022
                         </p>
                     </div>
+                    <!-- Divider-->
+                    
                     {% endfor %}
+                    <!-- Divider-->
                 </div>
             </div>
         </div>

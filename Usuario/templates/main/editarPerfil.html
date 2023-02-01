@@ -12,12 +12,12 @@
 
 {% block funcion %}
 
+<form action = "{% url 'editarPerfil' %}" method="POST">{% csrf_token %}
 
-<form action = "{% url 'editarPerfil' %}" method="POST" enctype="multipart/form-data">
-    {% csrf_token %}
     <table>
 
-        {{ form.as_table}}
+        {{ form.as_table }}
+        {{ iForm.as_table}}
 
     </table>
 

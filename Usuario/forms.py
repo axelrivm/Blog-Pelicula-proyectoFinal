@@ -10,13 +10,12 @@ class crearUsuario(UserCreationForm):
     email= forms.EmailField(label="Email Usuario")
     password1= forms.CharField(label="Contraseña", widget= forms.PasswordInput)
     password2= forms.CharField(label="Confirmar contraseña", widget= forms.PasswordInput)
-
     class Meta:
         model=User
         fields=["username", "email", "password1", "password2"]
         help_texts = {k:"" for k in fields}
 
-class editarUsuario(UserChangeForm):
+class editarUsuario(UserCreationForm):
 
     email= forms.EmailField(label="Email Usuario")
     password1= forms.CharField(label="Contraseña", widget= forms.PasswordInput)
@@ -28,10 +27,3 @@ class editarUsuario(UserChangeForm):
         model=User
         fields=["email", "password1", "password2", "first_name", "last_name"]
         help_texts = {k:"" for k in fields}
-
-class avatarImagen(forms.ModelForm):
-    class Meta:
-        model = Avatar
-        fields = ['imagen']
-        help_texts = {k:"" for k in fields}
-
