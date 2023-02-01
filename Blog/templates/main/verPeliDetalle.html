@@ -7,20 +7,21 @@
 {% block funcion2 %}
 
     <div class="d-flex justify-content-center"> 
-        <div class="row">
             <form action = "" method="POST" enctype="multipart/form-data">{% csrf_token %}
-                <div class="col-4">
-                    <img src="{{peli.imagen.url}}" width=250 >
-                    <h4>Nombre: {{peli.nombre}} </h4>
-                    <h3>Sinopsis: {{peli.sinopsis}}</h3>
-                    <h3>Año de creacion: {{peli.año}}</h3>
-                    {% if user.is_authenticated %}
-                    <a class="btn btn-danger" href="{% url 'modificarPeli' peli.id %}">Modificar</a>
-                    <a class="btn btn-danger" href="{% url 'eliminarPeli' peli.id %}">Eliminar</a>
-                    {% endif %}
-                </div>
+                <div class="card mx-8 col-8 shadow bg-white rounded">
+                    <img src="{{ peli.imagen.url }}" class="card-img-top" alt="...">
+                    <div class="card-body p-3 mb-5 ">
+                      <h5 class="card-title">{{peli.nombre}}</h5>
+                      <p class="card-text">{{peli.sinopsis}}</p>
+                      <p class="card-text">{{peli.año}}</p>
+                    </div>
+                      {% if user.is_authenticated %}
+                      <div class="card-footer bg-transparent">
+                      <a class="btn btn-warning" href="{% url 'modificarPeli' peli.id %}">Modificar</a>
+                      <a class="btn btn-danger" href="{% url 'eliminarPeli' peli.id %}">Eliminar</a>
+                      {% endif %}
+                    </div>
             </form>               
-        </div>
     </div> 
 
 {% endblock %}

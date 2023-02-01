@@ -1,20 +1,12 @@
 {% extends "main/padre.html" %}
 
-
 {% load static %}
-
-{% block titulo%}
-
-<span class="subheading">Aca veo la peli</span>
-
-{% endblock %}
 
 {% block funcion2 %}
 
 {% for peli in peliculas %}
 
     <div class="d-flex justify-content-center">
-        <div class="row">
             {% for peli in peliculas %}
             <form action = "" method="POST" enctype="multipart/form-data">{% csrf_token %}
                 <div class="card mx-8 col-8 shadow bg-white rounded">
@@ -30,10 +22,9 @@
                       <a class="btn btn-danger" href="{% url 'eliminarPeli' peli.id %}">Eliminar</a>
                       {% endif %}
                     </div>
-                  </div>
+                </div>
             </form>               
             {% endfor %}
-        </div>
     </div>
 
 {% endfor %}
