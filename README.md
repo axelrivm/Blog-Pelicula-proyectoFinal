@@ -11,7 +11,7 @@
     * python manage.py runserver
 
 ## Video mostrando el proyecto:
-*Finalizado para el 23/01*
+https://www.youtube.com/watch?v=PNck_na6bXg&ab_channel=AxelRivm
 
 
 ## AVISO 
