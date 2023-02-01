@@ -2,14 +2,6 @@
 
 {% load static %}
 
-{% block titulo%}
-
-<span class="subheading">Aca creo la peli</span>
-
-{% endblock %}
-
-<h3>{{ mensaje }}</h3>
-
 {% block funcion %}
 <div class="d-flex justify-content-center">
     <form action = "{% url 'crearPeli' %}" method="POST" enctype="multipart/form-data">{% csrf_token %}

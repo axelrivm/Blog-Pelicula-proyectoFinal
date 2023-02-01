@@ -24,7 +24,7 @@ def ingreso(request):
             usuario= authenticate(username=name, password=password)
             if usuario is not None:
                 login(request, usuario)
-                return render(request, "main/inicio.html", {"mensaje":f"Usuario {usuario} ingresado correctamente"})
+                return redirect('inicio')
             else:
                 return render(request, "main/login.html", {"form": form, "mensaje": "Error al ingresar el usuario"})
         else:
@@ -39,7 +39,7 @@ def register(request):
         if form.is_valid():
             username= form.cleaned_data
             form.save()
-            return render(request, "main/inicio.html", {"mensaje":f"Usuario {username} creado correctamente"})
+            return redirect('inicio')
         else:
             return render(request, "main/register.html", {"form": form, "mensaje": "Error al crear el usuario"})
         
@@ -61,7 +61,7 @@ def editarPerfil(request):
             usuario.first_name = info["first_name"]
             usuario.last_name = info["last_name"]
             usuario.save()
-            return render(request, "main/inicio.html", {"mensaje":f"Usuario {usuario} modificado correctamente"})
+            return redirect('inicio')
         else:
             return render(request, "main/editarPerfil.html", {"form": form, "nombreusuario":usuario.username})
     else:

@@ -2,14 +2,6 @@
 
 {% load static %}
 
-{% block titulo%}
-
-<span class="subheading">Aca modifico la peli</span>
-
-{% endblock %}
-
-<h3>{{ mensaje }}</h3>
-
 {% block funcion %}
 
 <form action = "{% url 'modificarPeli' pelicula.id %}" method="POST" enctype="multipart/form-data">
